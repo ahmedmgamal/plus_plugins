@@ -26,4 +26,20 @@ jobs:
         with:
           channel: 'beta' # Specify the flutter channel (beta, dev, or stable)
 
-      # Step 4: Get Flutter
+      # Step 4: Get Flutter dependencies
+      - name: Get dependencies
+        working-directory: ./packages/sensors_plus/sensors_plus/example
+        run: flutter pub get
+
+      # Step 5: Build the APK
+      - name: Build APK
+        working-directory: ./packages/sensors_plus/sensors_plus/example
+        run: flutter build apk
+
+      # Step 6: Upload the APK as an artifact
+      - name: Upload APK
+        working-directory: ./packages/sensors_plus/sensors_plus/example
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-apk
+          path: build/app/outputs/apk/release/app-release.apk
