@@ -1,5 +1,5 @@
 <h1 align="center">Plus plugins</h1>
-<p  align="center">
+<p align="center">
 <a href="https://flutter.dev/docs/development/packages-and-plugins/favorites" target="_blank" rel="noreferrer noopener">
     <img src="./assets/flutter-favorite-badge.png" width="15%" alt="build">
 </a>
