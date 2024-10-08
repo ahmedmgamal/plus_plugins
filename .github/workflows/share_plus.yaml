@@ -10,6 +10,11 @@ defaults:
     shell: bash
 
 on:
+  push:
+    branches:
+      - master
+      - main
+
   pull_request:
     paths:
       - "packages/share_plus/**"
